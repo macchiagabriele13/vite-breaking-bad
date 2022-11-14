@@ -1,1 +1,12 @@
-@use '../node_modules/bootstrap/dist/css/bootstrap.css'
+@use '../node_modules/bootstrap/dist/css/bootstrap.css';
+@use './assets/scss/partials/Variables' as *;
+
+
+body {
+    background-color: $primaryBg;
+    color: $light;
+}
+
+img {
+    max-width: 100%;
+}
