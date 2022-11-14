@@ -32,6 +32,7 @@ export default {
   mounted() {
     this.callApi(this.API_URL)
   },
+
   components: {
     SiteHeader,
     SiteMain,
@@ -43,6 +44,14 @@ export default {
 </script>
 
 <template>
+
+
+  <SiteHeader />
+  <div class="container">
+    <SearchBox />
+    <SiteMain />
+
+  </div>
 
 </template>
 
