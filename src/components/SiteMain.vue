@@ -1,11 +1,20 @@
 <script>
+import ItemList from './ItemList.vue'
 
 export default {
-    name: "SiteMain"
+    name: 'SiteMain',
+    components: {
+        ItemList,
+    }
 }
+
 </script>
 
 <template>
+
+    <main>
+        <ItemList />
+    </main>
 
 </template>
 

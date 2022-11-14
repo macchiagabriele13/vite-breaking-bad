@@ -51,21 +51,7 @@ export default {
   <SiteHeader />
   <div class="container">
     <SearchBox />
-
-    <section class="characters">
-      <div class="container">
-        <div class="row">
-          <div class="col" v-for="character in store.characters">
-            <div class="character">
-              <img :src="character.img" alt="">
-              <h3>{{ character.name }}</h3>
-              <h5 class="fs-5">{{ character.category }}</h5>
-              <h6 class="fs-6">{{ character.status }}</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <SiteMain />
 
   </div>
 
