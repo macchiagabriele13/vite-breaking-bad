@@ -28,6 +28,9 @@ export default {
             axios.get(filterUrl)
                 .then(resp => {
                     console.log(resp);
+                    this.store.characters = resp.data
+                    this.store.loading = false
+
                 })
                 .catch(err => {
                     console.error(err);

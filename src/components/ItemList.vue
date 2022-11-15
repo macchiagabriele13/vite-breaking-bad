@@ -21,7 +21,7 @@ export default {
             <div class="total_found">
                 <span>Found {{ store.characters.length }} characters</span>
             </div>
-            <div class="loader" v-show="store.characters.length < 62">
+            <div class="loader" v-if="!store.loading === false">
                 <img src="../assets/img/brba.png" alt="">
                 <p>Attendere! Caricamento Personaggi...</p>
             </div>
