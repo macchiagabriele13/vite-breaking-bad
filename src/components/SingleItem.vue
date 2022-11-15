@@ -25,5 +25,28 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
 
+.character {
+    background-color: $primaryBg;
+    padding: 1rem;
+    text-align: center;
+    height: 450px;
+
+    .name {
+        text-transform: uppercase;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-weight: bolder;
+    }
+
+    .category,
+    .status {
+        color: $text-thumb;
+    }
+
+    .status {
+        font-size: smaller;
+    }
+}
 </style>

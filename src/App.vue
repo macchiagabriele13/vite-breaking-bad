@@ -50,7 +50,7 @@ export default {
 
   <SiteHeader />
   <div class="container">
-    <SearchBox />
+
     <SiteMain />
 
   </div>

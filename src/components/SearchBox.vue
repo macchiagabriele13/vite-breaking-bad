@@ -1,7 +1,12 @@
 <script>
-
+import { store } from '../store.js';
 export default {
-    name: "SearchBox"
+    name: "SearchBox",
+    data() {
+        return {
+            store
+        }
+    },
 }
 </script>
 
@@ -9,11 +14,10 @@ export default {
 
     <div class="selector">
 
-        <select class="form-select form-select-lg fs-6" placeholder="Category" name="" id="">
-            <option selected>Select category</option>
-            <option value="">One</option>
-            <option value="">Two</option>
-            <option value="">Three</option>
+        <select class="form-select form-select-lg fs-6" @change="$emit('selectCategory')"
+            v-model="store.categorySelector" placeholder="Select Category">
+            <option value="Breaking+Bad">Breaking Bad</option>
+            <option value="Better+Call+Saul">Better Call Saul</option>
         </select>
     </div>
 

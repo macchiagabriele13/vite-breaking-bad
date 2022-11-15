@@ -34,13 +34,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
 .characters {
     .container {
-        background-color: white;
+        background-color: $light;
         padding: 2rem;
 
         .total_found {
-            background-color: green;
+            background-color: $secondaryBg;
             padding: 0.5rem 0.5rem;
             margin: 1rem 0;
             font-size: smaller;
