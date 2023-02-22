@@ -22,27 +22,7 @@ export default {
     ItemList,
     SingleItem
   },
-  methods: {
-    callApi(url) {
-      axios.get(url)
-        .then(response => {
-          console.log(response);
-          this.store.characters = response.data
-          this.store.loading = false
 
-
-        })
-        .catch(error => {
-          /* console.error(error.message); */
-          this.store.error = error.message
-        })
-    }
-
-  },
-  mounted() {
-    this.callApi(this.store.API_URL)
-    /* console.log(this.store); */
-  },
 }
 </script>
 

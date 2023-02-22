@@ -2,7 +2,7 @@
 import ItemList from './ItemList.vue';
 import SearchBox from './SearchBox.vue';
 import { store } from '../store.js';
-import axios from 'axios';
+
 
 export default {
     name: 'SiteMain',
@@ -15,31 +15,34 @@ export default {
             store
         }
     },
-    methods: {
-        chooseCategory() {
-            console.log('click');
-            console.log(this.store.categorySelector);
+    /*  methods: {
+         chooseCategory() {
+             console.log('click');
+             console.log(this.store.categorySelector);
+ 
+             const selectedCategory = this.store.categorySelector
+             const filterUrl = `${this.store.API_URL}?category=${selectedCategory}`
+ 
+             console.log(filterUrl);
+ 
+              this.callApi(filterUrl) 
+ 
+             axios.get(filterUrl)
+                 .then(resp => {
+                     console.log(resp);
+                     this.store.characters = resp.data
+                     this.store.loading = false
+ 
+                 })
+                 .catch(err => {
+                     console.error(err);
+                 })
+ 
+ 
+         }
+  
+     }, */
 
-            const selectedCategory = this.store.categorySelector
-            const filterUrl = `${this.store.API_URL}?category=${selectedCategory}`
-
-            console.log(filterUrl);
-
-            axios.get(filterUrl)
-                .then(resp => {
-                    console.log(resp);
-                    this.store.characters = resp.data
-                    this.store.loading = false
-
-                })
-                .catch(err => {
-                    console.error(err);
-                })
-
-
-        }
-
-    }
 }
 
 </script>
@@ -47,7 +50,7 @@ export default {
 <template>
 
     <main>
-        <SearchBox @selectCategory="chooseCategory" />
+        <SearchBox @selectCategory="store.callApi(store.API_URL)" />
         <ItemList />
     </main>
 
